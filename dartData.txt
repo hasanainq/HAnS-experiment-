@@ -1,0 +1,20 @@
+Employee;Dwight Schrute;1989;Abc Street;2000;2500
+Song;Waka Waka;Shakira;2;2020
+Game;Mario Bros;Platform;3;2018
+Customer;Creed Bratton;abc123
+Employee;Michael Scott; 1990;Def Street;2100;2700
+Song;Shape of You;Ed Sheeran;4; 2017
+Game;The Legend of Zelda;Adventure;5;2017
+Customer;Angela Martin;password123
+Employee;Pam Beesly;1992;Ghi Street;2200;2800
+Song;Despacito;Luis Fonsi; 6;2017
+Game;Red Dead Redemption 2;Action-Adventure;7;2018
+Employee;Jim Halpert;1995;Jkl Street;2300;2900
+Customer;Kevin Malone;theoffice
+Song;Old Town Road;Lil Nas X;8;2019
+Game;The Witcher 3: Wild Hunt;RPG;9;2015
+Employee;Stanley Hudson;1998;Mno Street;2400;3000
+Song;Uptown Funk;Mark Ronson;10;2014
+Customer;Kelly Kapoor;qwerty
+Game;Overwatch;First-Person Shooter;11;2016
+
