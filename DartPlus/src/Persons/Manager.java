@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Manager {
-//&begin Data
+//&begin [Data]
     public void registerEmployee(ArrayList<Employee> employees, String name, String address, int bYear, double salary, Scanner input) {
         Employee employee = null;
         boolean inCorrect;
@@ -35,8 +35,8 @@ public class Manager {
     public boolean removeEmployee(ArrayList<Employee> employeeArrayList, Employee removeEmployee) {
         return employeeArrayList.remove(removeEmployee);
     }
-//&end Data
-//&begin Search
+//&end [Data]
+//&begin [Search]
     public Employee findEmployee(ArrayList<Employee> employeeArrayList, String ID) {
         for (Employee employee : employeeArrayList)
             if (employee.getID().equals(ID))
@@ -44,7 +44,7 @@ public class Manager {
         System.out.println("Persons.Employee with id " + ID + " not found.");
         return null;
     }
-//&end Search
+//&end [Search]
     public double calcNetSalary(Employee employee) {
         if (employee == null) return 0;
         final double GROSS_SALARY_TAX = 0.7;
@@ -68,7 +68,7 @@ public class Manager {
 
         return bonus;
     }
-//&begin ViewStats
+//&begin [ViewStats]
     public String viewAllEmployee(ArrayList<Employee> employeeArrayList) {
         String empStr = "";
         for (Employee manager : employeeArrayList) {
@@ -114,5 +114,5 @@ public class Manager {
         }
         return null;
     }
-//&end ViewStats
+//&end [ViewStats]
 }

@@ -127,6 +127,7 @@ public class Controller {
                 }
         }while(choice != '0');
     }
+
     public void employeeLoggedIn(Employee employee) throws Exception {
         char choice;
         String screens = "1234567890";
@@ -208,6 +209,7 @@ public class Controller {
             choice = Tools.getChar("");
             if(Tools.validateChar(choice, screens))
                 switch (choice) {
+// &begin[RentItem]
                     case '1' -> {
                         int sorting;
                         int rentItem = Tools.getInt("1. Game" + System.lineSeparator() + "2. Song Album");
@@ -229,7 +231,11 @@ public class Controller {
                         } else {
                             System.out.println("Item could not be rented");
                         }
+
                     }
+// &end[RentItem]
+
+// &begin[ReturnITem]
                     case '2' -> {
                         System.out.println("Current library" + System.lineSeparator() + customer.viewRented());
                         RentHistoryItem results = customer.returnItem(
@@ -246,7 +252,8 @@ public class Controller {
                             System.out.println(results.toString());
                         }
                     }
-//&begin Messaging
+// &end[ReturnITem]
+//&begin[Messaging]
                     case '3' -> {
                         customer.sendMessage(customerList, Tools.getString("Enter Message: ", input), Tools.getString("Enter id of recipient: ", input), customer);
                     }
@@ -257,7 +264,7 @@ public class Controller {
                         System.out.println(customer.viewInbox(customer));
                         customer.removeMessage(Tools.getInt("Enter index of message to remove: ") - 1, customer);
                     }
-//&end Messaging
+//&end [Messaging]
                     case '6' -> {
                         customer.requestUpgrade(upgradeRequests, customer);
                     }

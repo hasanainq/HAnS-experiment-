@@ -1,13 +1,13 @@
 package Persons;
 
 import Items.Rentable;
-//&begin Messaging
+//&begin [Messaging]
 import Utilities.Message;
-//&end Messaging
+//&end [Messaging]
 
 import java.util.ArrayList;
 public class CustomerGold extends Customer{
-//&begin Messaging
+//&begin [Messaging]
     CustomerGold(String name, ArrayList<Rentable> items, String ID, int credit, double amountSpent, ArrayList<Message> inbox, String password){
         super(name, password);
         setRentedItems(items);
@@ -16,7 +16,7 @@ public class CustomerGold extends Customer{
         setInbox(inbox);
         setAmountSpent(amountSpent);
     }
-//&end Messaging
+//&end [Messaging]
     @Override
     public String getStrMembership(){
         return "gold";

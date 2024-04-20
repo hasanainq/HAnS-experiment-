@@ -48,7 +48,7 @@ public class Employee {
         s = s + System.lineSeparator();
         return s;
     }
-//&begin Data
+//&begin [Data]
     public Customer registerCustomer(ArrayList<Customer> customerArrayList, String name, String password, Scanner input){
 
         Customer customer = null;
@@ -80,8 +80,8 @@ public class Employee {
     public boolean removeItem(ArrayList<Rentable> itemsList, Rentable item){
         return itemsList.remove(item);
     }
-//&end Data
-//&begin Search
+//&end [Data]
+//&begin [Search]
     public Customer getCustomer(ArrayList<Customer> customerList, String ID){
         for (Customer customer : customerList) {
             if (customer.getID().equals(ID)) {
@@ -102,23 +102,23 @@ public class Employee {
         }
         return null;
     }
-//&end Search
-//&begin Membership
+//&end [Search]
+//&begin [Membership]
     public boolean upgradeCustomer(ArrayList<Customer> customers, Customer customer){
 
         if (customer instanceof CustomerSilver){
             customers.remove(customer);
-//&begin Messaging
+//&begin [Messaging]
             customer = new CustomerGold(customer.getName(), customer.getRentedItems(), customer.getID(), customer.getCredit(), customer.getAmountSpent(), customer.getInbox(), customer.getPassword());
-//&end Messaging
+//&end [Messaging]
             customers.add(customer);
             return true;
         }
         else if (customer instanceof CustomerGold){
             customers.remove(customer);
-//&begin Messaging
+//&begin [Messaging]
             customer = new CustomerPlatinum(customer.getName(), customer.getRentedItems(), customer.getID(), customer.getCredit(), customer.getAmountSpent(), customer.getInbox(), customer.getPassword());
-//&end Messaging
+//&end [Messaging]
             customers.add(customer);
             return true;
         }
@@ -128,16 +128,16 @@ public class Employee {
         }
         else if (customer != null) {
             customers.remove(customer);
-//&begin Messaging
+//&begin [Messaging]
             customer = new CustomerSilver(customer.getName(), customer.getRentedItems(), customer.getID(), customer.getCredit(), customer.getAmountSpent(), customer.getInbox(), customer.getPassword());
-//&end Messaging
+//&end [Messaging]
             customers.add(customer);
             return true;
         }
         return false;
     }
-//&end Membership
-//&begin ViewCatalogue
+//&end [Membership]
+//&begin [ViewCatalogue]
     public String showItems(ArrayList<Rentable> itemsList){
         String itemStr = "";
         for (Rentable item : itemsList) {
@@ -145,8 +145,8 @@ public class Employee {
         }
         return itemStr;
     }
-//&end ViewCatalogue
-//&begin ViewStats
+//&end [ViewCatalogue]
+//&begin [ViewStats]
     public String viewAllCustomer(ArrayList<Customer> customerList) {
         String cusStr = "";
         for (Customer customer : customerList) {
@@ -163,5 +163,5 @@ public class Employee {
         }
         return upgReqStr;
     }
-//&end ViewStats
+//&end [ViewStats]
 }

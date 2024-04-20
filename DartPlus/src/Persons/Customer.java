@@ -4,9 +4,9 @@ import IO.Tools;
 import Items.Game;
 import Items.Rentable;
 import Items.Song;
-//&begin Messaging
+//&begin [Messaging]
 import Utilities.Message;
-//&end Messaging
+//&end [Messaging]
 import Utilities.RatingsComparator;
 import Utilities.RentHistoryItem;
 import Utilities.YearComparator;
@@ -23,9 +23,9 @@ public class Customer {
     private double amountSpent;
 
     private ArrayList<Rentable> rentedItems = new ArrayList<>();
-//&begin Messaging
+//&begin [Messaging]
     private ArrayList<Message> inbox = new ArrayList<>();
-//&end Messaging
+//&end [Messaging]
     Customer(String name, String password){
         this.name = name;
         this.ID = Tools.randomizeID();
@@ -85,7 +85,7 @@ public class Customer {
     public String toString(){
         return getID() + " : " + this.name + System.lineSeparator();
     }
-//&begin Messaging
+//&begin [Messaging]
     public ArrayList<Message> getInbox() {
         return inbox;
     }
@@ -143,8 +143,8 @@ public class Customer {
         this.inbox.add(message);
     }
     public int getInboxSize(){ return inbox.size(); }
-//&end Messaging
-//&begin ViewCatalogue
+//&end [Messaging]
+//&begin [ViewCatalogue]
     public String showItems(ArrayList<Rentable> itemsList, int itemType, int selectionSorting, String optionalGenreOrYear){
         String itemStr = "";
         if (itemType == 1) {
@@ -250,8 +250,8 @@ public class Customer {
         }
         return rentedItems;
     }
-//&end ViewCatalogue
-//&begin Search
+//&end [ViewCatalogue]
+//&begin [Search]
     public Rentable findItem(ArrayList<Rentable> itemsList, String ID){
         ArrayList<Rentable> array;
         int i;
@@ -265,16 +265,16 @@ public class Customer {
         }
         return null;
     }
-//&end Search
-//&begin Membership
+//&end [Search]
+//&begin [Membership]
 public String getStrMembership(){
     return "none";
 }
     public void requestUpgrade(ArrayList<Customer> upgradeRequests, Customer customer){
         upgradeRequests.add(customer);
     }
-//&end Membership
-//&begin RentItem
+//&end [Membership]
+//&begin [RentItem]
     public boolean rentItem(Rentable item, String rentDate){
         boolean wasRented = false;
         if (item!= null && item.getStatus() && !libraryFull()){
@@ -289,10 +289,10 @@ public String getStrMembership(){
         }
         return wasRented;
     }
-//&end RentItem
-//&begin Payment
-//&begin Ratings
-//&begin Review
+//&end [RentItem]
+//&begin [Payment]
+//&begin [Ratings]
+//&begin [Review]
     public RentHistoryItem returnItem(String itemID, String review, int rating, String returnDate){
         int CREDIT_COST = 5;
         Rentable item;
@@ -347,7 +347,7 @@ public String getStrMembership(){
             return null;
         }
     }
-//&end Review
-//&end Ratings
-//&end Payment
+//&end [Review]
+//&end [Ratings]
+//&end [Payment]
 }

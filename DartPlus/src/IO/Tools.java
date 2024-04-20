@@ -90,7 +90,7 @@ public class Tools {
         }
         return false;
     }
-//&begin Security
+//&begin [Security]
     public static String getPassword(){
 
         int leftLimit = 97; // letter 'a'
@@ -116,5 +116,5 @@ public class Tools {
         if (password.equals(correctPassword)) correct = true;
         return correct;
     }
-//&end Security
+//&end [Security]
 }

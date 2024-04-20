@@ -70,7 +70,7 @@ public abstract class Rentable implements Comparable<Rentable>{
     public void addRentFrequency(){
         this.rentFrequency += 1;
     }
-//&begin Ratings
+//&begin [Ratings]
     public void addRating(int rating) {
         this.ratings.add(rating);
     }
@@ -82,12 +82,12 @@ public abstract class Rentable implements Comparable<Rentable>{
         }
         return ((double)sum / size);
     }
-//&end Ratings
-//&begin Review
+//&end [Ratings]
+
     public void addReview(String review){
         this.reviews.add(review);
     }
-//&end Review
+
     public String getGenre(){
         System.out.println("WRONG GENRE");
         return "WRONG GENRE";
